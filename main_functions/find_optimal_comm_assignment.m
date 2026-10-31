@@ -3,11 +3,11 @@
 
 %% add necessary file paths
 
-% load  WSBM from https://aaronclauset.github.io/wsbm/
-addpath('/data/wheelock/data1/software/Aicher_2015_WSBM/WSBM_v1.3')
-addpath('/data/wheelock/data1/software/Aicher_2015_WSBM/WSBM_v1.3/private')
-addpath('./main_functions')
-addpath('./support_functions')
+% addpath('/data/wheelock/data1/software/Aicher_2015_WSBM/WSBM_v1.3')
+% addpath('/data/wheelock/data1/software/Aicher_2015_WSBM/WSBM_v1.3/private')
+% project_dir = "your_dir";
+addpath(fullfile(project_dir,'support_functions'));
+addpath(fullfile(project_dir,'main_functions'));
 
 %% Bootstrap
 
@@ -28,12 +28,15 @@ wsbm_clustering = identify_optimal_comm_WSBM(wsbm_results);
 
 
 % load the average fc matrix
-data_path = '/data/wheelock/data1/datasets/HCP/HCP_965_10min_Gordon333_20221123/mat/HCP_965_10min_Gordon333_20221123_Rest1.mat';
-load(data_path);
-fcmat = HCPRest1;
-ave_fcmat = mean(tanh(fcmat),3);
-clear fcmat HCPRest1 datapath ;
+% data_path = '/data/wheelock/data1/datasets/HCP/HCP_965_10min_Gordon333_20221123/mat/HCP_965_10min_Gordon333_20221123_Rest1.mat';
+% load(data_path);
+% fcmat = HCPRest1;
+% ave_fcmat = mean(tanh(fcmat),3);
+% clear fcmat HCPRest1 datapath ;
 
 kmeans_clustering = identify_optimal_comm_Kmeans(kmeans_results, ave_fcmat);
 
-sc_clustering = identify_optimal_comm_Kmeans(sc_results, ave_fcmat);
+sc_clustering = identify_optimal_comm_SC(sc_results, ave_fcmat);
+
+louvain_clustering = identify_optimal_comm_Louvain(louvain_results, ave_fcmat);
+

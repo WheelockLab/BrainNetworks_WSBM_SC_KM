@@ -1,7 +1,10 @@
+% This file shows the betweeen algorithm agreement for three algorithms
+
 %% add necessary file paths
 
-addpath('./main_functions')
-addpath('./support_functions')
+% project_dir = "your_dir";
+addpath(fullfile(project_dir,'support_functions'));
+addpath(fullfile(project_dir,'main_functions'));
 
 
 %% Data preprocessing
@@ -10,11 +13,11 @@ addpath('./support_functions')
 % Diagonal elements should be 1
 
 % Example 
-data_path = '/data/wheelock/data1/datasets/HCP/HCP_965_10min_Gordon333_20221123/mat/HCP_965_10min_Gordon333_20221123_Rest1.mat';
-load(data_path);
-fcmat = HCPRest1;
-ave_fcmat = mean(tanh(fcmat),3);
-clear fcmat HCPRest1 datapath ;
+% data_path = '/data/wheelock/data1/datasets/HCP/HCP_965_10min_Gordon333_20221123/mat/HCP_965_10min_Gordon333_20221123_Rest1.mat';
+% load(data_path);
+% fcmat = HCPRest1;
+% ave_fcmat = mean(tanh(fcmat),3);
+% clear fcmat HCPRest1 datapath ;
 dist_mat = 1 - corrcoef(ave_fcmat);
 
 %% NMI

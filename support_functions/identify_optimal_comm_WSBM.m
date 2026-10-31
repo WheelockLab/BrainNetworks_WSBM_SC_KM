@@ -31,7 +31,7 @@ for k = 2:K_valid
 end
 
 
-wsbm_clustering.datapath = wsbm_results.path;
+%wsbm_clustering.datapath = wsbm_results.path;
 wsbm_clustering.K_valid = K_valid;
 wsbm_clustering.idx = idx_final;
 wsbm_clustering.log_lik = log_lik_final;

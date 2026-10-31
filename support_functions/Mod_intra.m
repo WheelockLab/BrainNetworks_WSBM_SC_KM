@@ -1,7 +1,7 @@
 function[Mod_rep] = Mod_intra(kmeans_results, wsbm_results, sc_results, ave_fcmat)
 % This function calculates the Modularity for all replications
 % within the solutions from clustering methods for each k. 
-% Inputs: solutions fromm three clustering methods "apply_method" 
+% Inputs: solutions from three clustering methods "apply_method" 
 %           kmeans_results, wsbm_results, sc_results
 %           INPUT ORDERING MATTERS!!
 

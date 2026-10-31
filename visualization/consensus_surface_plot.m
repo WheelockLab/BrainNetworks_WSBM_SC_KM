@@ -1,7 +1,8 @@
 %% add paths
 
-addpath('./support_functions');
-addpath('./atlases');
+% project_dir = "your_dir";
+addpath(fullfile(project_dir,'support_functions'));
+addpath(fullfile(project_dir,'atlases'));
 load('Parcels_Gordon.mat','Parcels');
 
 %% rainbow plots

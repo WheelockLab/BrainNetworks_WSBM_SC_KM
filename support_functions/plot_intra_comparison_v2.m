@@ -1,7 +1,7 @@
 function[] = plot_intra_comparison_v2(val_rep, xtick_vals, y_axis_title, legendVar)
 % This function plots the intra comparison for three methods on a given
 % metric. 
-% Works for CH index, C index, Dunn index, Modularity
+% Works for CH index, C index, Dunn index, Modularity, zRand
 
 % Input:
 % val_rep = the structure of values of the post-hoc measures from

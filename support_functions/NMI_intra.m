@@ -1,7 +1,7 @@
 function[NMI_rep] = NMI_intra(kmeans_results, wsbm_results, sc_results)
 % This function calculates the NMI values between all pairs of replications
 % within the solutions from clustering methods for each k. 
-% Inputs: solutions fromm three clustering methods "apply_method" 
+% Inputs: solutions from three clustering methods "apply_method" 
 %           kmeans_results, wsbm_results, sc_results
 %           INPUT ORDERING MATTERS!!
 

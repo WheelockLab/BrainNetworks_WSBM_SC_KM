@@ -1,7 +1,7 @@
 function[HD_rep] = HD_inter(kmeans_results, wsbm_results, sc_results)
 % This function calculates the Hamming distance values between all pairs of replications
 % between the solutions from different clustering methods for each k. 
-% Inputs: solutions fromm three clustering methods "apply_method" 
+% Inputs: solutions from three clustering methods "apply_method" 
 %           kmeans_results, wsbm_results, sc_results
 %           INPUT ORDERING MATTERS!!
 

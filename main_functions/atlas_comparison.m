@@ -1,6 +1,9 @@
 % load all the method_results from apply_method
 % kmeans_results, wsbm_results, sc_results
-addpath('./support_functions');
+
+% project_dir = "your_dir";
+addpath(fullfile(project_dir,'support_functions'));
+addpath(fullfile(project_dir,'atlases'));
 
 %% Load the atlas
 
